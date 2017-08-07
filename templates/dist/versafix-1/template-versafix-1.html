@@ -184,7 +184,11 @@
       preheaderBlock:preview,
       hrBlock:preview,
       sideArticleBlock:preview,
+      salutationBlock:preview,
       textBlock:preview,
+      lockerBlock:preview,
+      evaluationBlock:preview,
+      signatureBlock:preview,
       singleArticleBlock:preview,
       doubleArticleBlock:preview,
       tripleArticleBlock:preview,
@@ -286,8 +290,8 @@
     }
   </style>
   <style type="text/css" data-inline="true">
-    [data-ko-block=tripleArticleBlock] .links-color a, 
-    [data-ko-block=tripleArticleBlock] .links-color a:link, 
+    [data-ko-block=tripleArticleBlock] .links-color a,
+    [data-ko-block=tripleArticleBlock] .links-color a:link,
     [data-ko-block=tripleArticleBlock] .links-color a:visited,
     [data-ko-block=tripleArticleBlock] .links-color a:hover {
       color: #3f3f3f;
@@ -298,8 +302,8 @@
     [data-ko-block=tripleArticleBlock] .long-text p:last-child { Margin-bottom: 0px; }
     [data-ko-block=tripleArticleBlock] .long-text p:first-child { Margin-top: 0px; }
 
-    [data-ko-block=doubleArticleBlock] .links-color a, 
-    [data-ko-block=doubleArticleBlock] .links-color a:link, 
+    [data-ko-block=doubleArticleBlock] .links-color a,
+    [data-ko-block=doubleArticleBlock] .links-color a:link,
     [data-ko-block=doubleArticleBlock] .links-color a:visited,
     [data-ko-block=doubleArticleBlock] .links-color a:hover {
       color: #3f3f3f;
@@ -310,8 +314,8 @@
     [data-ko-block=doubleArticleBlock] .long-text p:last-child { Margin-bottom: 0px; }
     [data-ko-block=doubleArticleBlock] .long-text p:first-child { Margin-top: 0px; }
 
-    [data-ko-block=singleArticleBlock] .links-color a, 
-    [data-ko-block=singleArticleBlock] .links-color a:link, 
+    [data-ko-block=singleArticleBlock] .links-color a,
+    [data-ko-block=singleArticleBlock] .links-color a:link,
     [data-ko-block=singleArticleBlock] .links-color a:visited,
     [data-ko-block=singleArticleBlock] .links-color a:hover {
       color: #3f3f3f;
@@ -322,8 +326,20 @@
     [data-ko-block=singleArticleBlock] .long-text p:last-child { Margin-bottom: 0px; }
     [data-ko-block=singleArticleBlock] .long-text p:first-child { Margin-top: 0px; }
 
-    [data-ko-block=textBlock] .links-color a, 
-    [data-ko-block=textBlock] .links-color a:link, 
+    [data-ko-block=salutationBlock] .links-color a,
+    [data-ko-block=salutationBlock] .links-color a:link,
+    [data-ko-block=salutationBlock] .links-color a:visited,
+    [data-ko-block=salutationBlock] .links-color a:hover {
+      color: #3f3f3f;
+      -ko-color: @longTextStyle.linksColor;
+      text-decoration: underline;
+    }
+    [data-ko-block=salutationBlock] .long-text p { Margin: 1em 0px; }
+    [data-ko-block=salutationBlock] .long-text p:last-child { Margin-bottom: 0px; }
+    [data-ko-block=salutationBlock] .long-text p:first-child { Margin-top: 0px; }
+
+    [data-ko-block=textBlock] .links-color a,
+    [data-ko-block=textBlock] .links-color a:link,
     [data-ko-block=textBlock] .links-color a:visited,
     [data-ko-block=textBlock] .links-color a:hover {
       color: #3f3f3f;
@@ -334,8 +350,44 @@
     [data-ko-block=textBlock] .long-text p:last-child { Margin-bottom: 0px; }
     [data-ko-block=textBlock] .long-text p:first-child { Margin-top: 0px; }
 
-    [data-ko-block=sideArticleBlock] .links-color a, 
-    [data-ko-block=sideArticleBlock] .links-color a:link, 
+    [data-ko-block=lockerBlock] .links-color a,
+    [data-ko-block=lockerBlock] .links-color a:link,
+    [data-ko-block=lockerBlock] .links-color a:visited,
+    [data-ko-block=lockerBlock] .links-color a:hover {
+      color: #3f3f3f;
+      -ko-color: @longTextStyle.linksColor;
+      text-decoration: underline;
+    }
+    [data-ko-block=lockerBlock] .long-text p { Margin: 1em 0px; }
+    [data-ko-block=lockerBlock] .long-text p:last-child { Margin-bottom: 0px; }
+    [data-ko-block=lockerBlock] .long-text p:first-child { Margin-top: 0px; }
+
+    [data-ko-block=evaluationBlock] .links-color a,
+    [data-ko-block=evaluationBlock] .links-color a:link,
+    [data-ko-block=evaluationBlock] .links-color a:visited,
+    [data-ko-block=evaluationBlock] .links-color a:hover {
+      color: #3f3f3f;
+      -ko-color: @longTextStyle.linksColor;
+      text-decoration: underline;
+    }
+    [data-ko-block=evaluationBlock] .long-text p { Margin: 1em 0px; }
+    [data-ko-block=evaluationBlock] .long-text p:last-child { Margin-bottom: 0px; }
+    [data-ko-block=evaluationBlock] .long-text p:first-child { Margin-top: 0px; }
+
+    [data-ko-block=signatureBlock] .links-color a,
+    [data-ko-block=signatureBlock] .links-color a:link,
+    [data-ko-block=signatureBlock] .links-color a:visited,
+    [data-ko-block=signatureBlock] .links-color a:hover {
+      color: #3f3f3f;
+      -ko-color: @longTextStyle.linksColor;
+      text-decoration: underline;
+    }
+    [data-ko-block=signatureBlock] .long-text p { Margin: 1em 0px; }
+    [data-ko-block=signatureBlock] .long-text p:last-child { Margin-bottom: 0px; }
+    [data-ko-block=signatureBlock] .long-text p:first-child { Margin-top: 0px; }
+
+    [data-ko-block=sideArticleBlock] .links-color a,
+    [data-ko-block=sideArticleBlock] .links-color a:link,
     [data-ko-block=sideArticleBlock] .links-color a:visited,
     [data-ko-block=sideArticleBlock] .links-color a:hover {
       color: #3f3f3f;
@@ -346,8 +398,8 @@
     [data-ko-block=sideArticleBlock] .long-text p:last-child { Margin-bottom: 0px; }
     [data-ko-block=sideArticleBlock] .long-text p:first-child { Margin-top: 0px; }
 
-    [data-ko-block=socialBlock] .links-color a, 
-    [data-ko-block=socialBlock] .links-color a:link, 
+    [data-ko-block=socialBlock] .links-color a,
+    [data-ko-block=socialBlock] .links-color a:link,
     [data-ko-block=socialBlock] .links-color a:visited,
     [data-ko-block=socialBlock] .links-color a:hover {
       color: #cccccc;
@@ -358,8 +410,8 @@
     [data-ko-block=socialBlock] .long-text p:last-child { Margin-bottom: 0px; }
     [data-ko-block=socialBlock] .long-text p:first-child { Margin-top: 0px; }
 
-    [data-ko-block=footerBlock] .links-color a, 
-    [data-ko-block=footerBlock] .links-color a:link, 
+    [data-ko-block=footerBlock] .links-color a,
+    [data-ko-block=footerBlock] .links-color a:link,
     [data-ko-block=footerBlock] .links-color a:visited,
     [data-ko-block=footerBlock] .links-color a:hover {
       color: #cccccc;
@@ -708,6 +760,32 @@
   </table>
   <!-- /TitleBlock -->
 
+  <!-- salutationBlock -->
+  <table class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf"
+    style="background-color: #bfbfbf; -ko-background-color: @externalBackgroundColor; -ko-attr-bgcolor: @externalBackgroundColor" data-ko-block="salutationBlock">
+    <tr>
+      <td class="vb-outer" align="center" valign="top" bgcolor="#bfbfbf"
+        style="background-color: #bfbfbf; -ko-background-color: @externalBackgroundColor; -ko-attr-bgcolor: @externalBackgroundColor">
+
+<!--[if (gte mso 9)|(lte ie 8)]><table align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]-->
+        <div class="oldwebkit">
+        <table width="570" border="0" cellpadding="0" cellspacing="18" class="vb-container fullpad" bgcolor="#ffffff" 
+          style="width: 100%; max-width: 570px; background-color: #ffffff; -ko-attr-bgcolor: @backgroundColor; -ko-background-color: @backgroundColor;">
+          <tr>
+            <td align="left" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;
+              -ko-font-size: @[longTextStyle.size]px; -ko-font-family: @longTextStyle.face; -ko-color: @longTextStyle.color"
+              class="long-text links-color">
+              <p>{{salutation}}</p>
+            </td>
+          </tr>
+        </table>
+        </div>
+<!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+      </td>
+    </tr>
+  </table>
+  <!-- /salutationBlock -->
+
   <!-- textBlock -->
   <table class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf"
     style="background-color: #bfbfbf; -ko-background-color: @externalBackgroundColor; -ko-attr-bgcolor: @externalBackgroundColor" data-ko-block="textBlock">
@@ -734,6 +812,84 @@
     </tr>
   </table>
   <!-- /textBlock -->
+
+  <!-- lockerBlock -->
+  <table class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf"
+    style="background-color: #bfbfbf; -ko-background-color: @externalBackgroundColor; -ko-attr-bgcolor: @externalBackgroundColor" data-ko-block="salutationBlock">
+    <tr>
+      <td class="vb-outer" align="center" valign="top" bgcolor="#bfbfbf"
+        style="background-color: #bfbfbf; -ko-background-color: @externalBackgroundColor; -ko-attr-bgcolor: @externalBackgroundColor">
+
+<!--[if (gte mso 9)|(lte ie 8)]><table align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]-->
+        <div class="oldwebkit">
+        <table width="570" border="0" cellpadding="0" cellspacing="18" class="vb-container fullpad" bgcolor="#ffffff" 
+          style="width: 100%; max-width: 570px; background-color: #ffffff; -ko-attr-bgcolor: @backgroundColor; -ko-background-color: @backgroundColor;">
+          <tr>
+            <td align="left" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;
+              -ko-font-size: @[longTextStyle.size]px; -ko-font-family: @longTextStyle.face; -ko-color: @longTextStyle.color"
+              class="long-text links-color">
+              <p>{{link}}</p>
+            </td>
+          </tr>
+        </table>
+        </div>
+<!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+      </td>
+    </tr>
+  </table>
+  <!-- /lockerBlock -->
+
+  <!-- evaluationBlock -->
+  <table class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf"
+    style="background-color: #bfbfbf; -ko-background-color: @externalBackgroundColor; -ko-attr-bgcolor: @externalBackgroundColor" data-ko-block="salutationBlock">
+    <tr>
+      <td class="vb-outer" align="center" valign="top" bgcolor="#bfbfbf"
+        style="background-color: #bfbfbf; -ko-background-color: @externalBackgroundColor; -ko-attr-bgcolor: @externalBackgroundColor">
+
+<!--[if (gte mso 9)|(lte ie 8)]><table align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]-->
+        <div class="oldwebkit">
+        <table width="570" border="0" cellpadding="0" cellspacing="18" class="vb-container fullpad" bgcolor="#ffffff" 
+          style="width: 100%; max-width: 570px; background-color: #ffffff; -ko-attr-bgcolor: @backgroundColor; -ko-background-color: @backgroundColor;">
+          <tr>
+            <td align="left" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;
+              -ko-font-size: @[longTextStyle.size]px; -ko-font-family: @longTextStyle.face; -ko-color: @longTextStyle.color"
+              class="long-text links-color">
+              <p>{{evaluation}}</p>
+            </td>
+          </tr>
+        </table>
+        </div>
+<!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+      </td>
+    </tr>
+  </table>
+  <!-- /evaluationBlock -->
+
+  <!-- signatureBlock -->
+  <table class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf"
+    style="background-color: #bfbfbf; -ko-background-color: @externalBackgroundColor; -ko-attr-bgcolor: @externalBackgroundColor" data-ko-block="salutationBlock">
+    <tr>
+      <td class="vb-outer" align="center" valign="top" bgcolor="#bfbfbf"
+        style="background-color: #bfbfbf; -ko-background-color: @externalBackgroundColor; -ko-attr-bgcolor: @externalBackgroundColor">
+
+<!--[if (gte mso 9)|(lte ie 8)]><table align="center" border="0" cellspacing="0" cellpadding="0" width="570"><tr><td align="center" valign="top"><![endif]-->
+        <div class="oldwebkit">
+        <table width="570" border="0" cellpadding="0" cellspacing="18" class="vb-container fullpad" bgcolor="#ffffff" 
+          style="width: 100%; max-width: 570px; background-color: #ffffff; -ko-attr-bgcolor: @backgroundColor; -ko-background-color: @backgroundColor;">
+          <tr>
+            <td align="left" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;
+              -ko-font-size: @[longTextStyle.size]px; -ko-font-family: @longTextStyle.face; -ko-color: @longTextStyle.color"
+              class="long-text links-color">
+              <p>{{signature}}</p>
+            </td>
+          </tr>
+        </table>
+        </div>
+<!--[if (gte mso 9)|(lte ie 8)]></td></tr></table><![endif]-->
+      </td>
+    </tr>
+  </table>
+  <!-- /signatureBlock -->
 
   <!-- tripleArticleBlock -->
   <table class="vb-outer" width="100%" cellpadding="0" border="0" cellspacing="0" bgcolor="#bfbfbf"
