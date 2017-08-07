@@ -3,7 +3,7 @@ tinymce.PluginManager.add('salutation', function(editor, url) {
     editor.execCommand('mceInsertContent', false, '{{salutation}}');
   };
 
-  editor.addCommand('mceSalutation', insertSalutation);
+  //editor.addCommand('mceSalutation', insertSalutation);
 
   editor.addButton('salutation', {
     text: 'Insert salutation placeholder',
@@ -15,8 +15,8 @@ tinymce.PluginManager.add('salutation', function(editor, url) {
   editor.addMenuItem('salutation', {
     text: 'Insert salutation placeholder',
     context: 'insert',
-    cmd: 'mceSalutation'
-    //onclick: insertSalutation
+    //cmd: 'mceSalutation'
+    onclick: insertSalutation
   });
 });
 
@@ -25,7 +25,7 @@ tinymce.PluginManager.add('locker', function(editor, url) {
     editor.execCommand('mceInsertContent', false, '{{link}}');
   };
 
-  editor.addCommand('mceLocker', insertLocker);
+  //editor.addCommand('mceLocker', insertLocker);
 
   editor.addButton('locker', {
     text: 'Insert locker link placeholder',
@@ -37,8 +37,8 @@ tinymce.PluginManager.add('locker', function(editor, url) {
   editor.addMenuItem('locker', {
     text: 'Insert locker link placeholder',
     context: 'insert',
-    cmd: 'mceLocker'
-    //onclick: insertLocker
+    //cmd: 'mceLocker'
+    onclick: insertLocker
   });
 });
 
@@ -47,7 +47,7 @@ tinymce.PluginManager.add('evaluation', function(editor, url) {
     editor.execCommand('mceInsertContent', false, '{{evaluation}}');
   };
 
-  editor.addCommand('mceEvaluation', insertEvaluation);
+  //editor.addCommand('mceEvaluation', insertEvaluation);
 
   editor.addButton('evaluation', {
     text: 'Insert evaluation placeholder',
@@ -59,8 +59,8 @@ tinymce.PluginManager.add('evaluation', function(editor, url) {
   editor.addMenuItem('evaluation', {
     text: 'Insert evaluation placeholder',
     context: 'insert',
-    cmd: 'mceEvaluation'
-    //onclick: insertEvaluation
+    //cmd: 'mceEvaluation'
+    onclick: insertEvaluation
   });
 });
 
@@ -69,7 +69,7 @@ tinymce.PluginManager.add('signature', function(editor, url) {
     editor.execCommand('mceInsertContent', false, '{{signature}}');
   };
 
-  editor.addCommand('mceSignature', insertSignature);
+  //editor.addCommand('mceSignature', insertSignature);
 
   editor.addButton('signature', {
     text: 'Insert signature placeholder',
@@ -81,7 +81,7 @@ tinymce.PluginManager.add('signature', function(editor, url) {
   editor.addMenuItem('signature', {
     text: 'Insert signature placeholder',
     context: 'insert',
-    cmd: 'mceSignature'
-    //onclick: insertSignature
+    //cmd: 'mceSignature'
+    onclick: insertSignature
   });
 });
