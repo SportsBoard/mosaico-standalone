@@ -6,9 +6,10 @@ tinymce.PluginManager.add('salutation', function(editor, url) {
   //editor.addCommand('mceSalutation', insertSalutation);
 
   editor.addButton('salutation', {
+    text: 'Insert salutation placeholder',
     tooltip: 'Insert salutation placeholder',
-    // icon: false,
-    icon: 'https://sportsboard.github.io/mosaico-standalone/mosaico/img/salutationIcon.png',
+    icon: true,
+    // icon: 'https://sportsboard.github.io/mosaico-standalone/mosaico/img/salutationIcon.png',
     image: 'https://sportsboard.github.io/mosaico-standalone/mosaico/img/salutationIcon.png',
     onclick: insertSalutation
   });
