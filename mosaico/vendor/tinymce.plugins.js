@@ -6,7 +6,7 @@ tinymce.PluginManager.add('salutation', function(editor, url) {
   //editor.addCommand('mceSalutation', insertSalutation);
 
   editor.addButton('salutation', {
-    text: 'Insert salutation placeholder',
+    // text: 'Insert salutation placeholder',
     tooltip: 'Insert salutation placeholder',
     icon: true,
     image: 'https://sportsboard.github.io/mosaico-standalone/mosaico/img/salutationIcon.png',
@@ -30,7 +30,7 @@ tinymce.PluginManager.add('locker', function(editor, url) {
   //editor.addCommand('mceLocker', insertLocker);
 
   editor.addButton('locker', {
-    text: 'Insert locker link placeholder',
+    // text: 'Insert locker link placeholder',
     tooltip: 'Insert locker link placeholder',
     icon: true,
     image: 'https://sportsboard.github.io/mosaico-standalone/mosaico/img/lockerIcon.png',
@@ -54,7 +54,7 @@ tinymce.PluginManager.add('evaluation', function(editor, url) {
   //editor.addCommand('mceEvaluation', insertEvaluation);
 
   editor.addButton('evaluation', {
-    text: 'Insert evaluation placeholder',
+    // text: 'Insert evaluation placeholder',
     tooltip: 'Insert evaluation placeholder',
     icon: true,
     image: 'https://sportsboard.github.io/mosaico-standalone/mosaico/img/evaluationIcon.png',
@@ -78,7 +78,7 @@ tinymce.PluginManager.add('signature', function(editor, url) {
   //editor.addCommand('mceSignature', insertSignature);
 
   editor.addButton('signature', {
-    text: 'Insert signature placeholder',
+    // text: 'Insert signature placeholder',
     tooltip: 'Insert signature placeholder',
     icon: true,
     image: 'https://sportsboard.github.io/mosaico-standalone/mosaico/img/signatureIcon.png',
