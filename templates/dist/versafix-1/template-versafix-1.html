@@ -37,7 +37,6 @@
         widget: text;
         help: Alternative text will be shown on email clients that does not download image automatically;
       }
-      sponsor { label: Sponsor; properties: visible=true src url alt; category: hidden }
       titleText {label:Title Text;category: hidden;}
       gutterVisible { label: Show Gutter; extend: visible }
       socialIconType { label: Icon Version;widget: select; options:bw=Black and White|colors=Colors; }
@@ -97,7 +96,7 @@
       frameTheme { label: Frame Style; }
       frameTheme:preview { -ko-background-color: @[backgroundColor] }
 
-      template { label: Page; theme: frameTheme ; version: 1.0.5; }
+      template { label: Page; theme: frameTheme ; version: 1.0.6; }
 
       footerBlock unsubscribeLinkStyle { label: Unsubscribe;  }
       footerBlock { label: Unsubscribe Block; theme: frameTheme }
@@ -1583,17 +1582,65 @@
         <div class="oldwebkit">
         <table width="570" style="width: 100%; max-width: 570px" border="0" cellpadding="0" cellspacing="9" class="vb-container halfpad" align="center">
           <tr>
-            <td style="text-align: center;">
-              <a style="text-decoration: underline; color: #ffffff; text-align: center; font-size: 13px; 
-                font-weight: normal; font-family: Arial, Helvetica, sans-serif;
-                -ko-text-decoration: @linkStyle.decoration; -ko-color: @linkStyle.color; -ko-font-size: @[linkStyle.size]px; -ko-font-family: @linkStyle.face"
-                href="{{unsubscribe}}"><span data-ko-editable="disiscrivitiText">Unsubscribe</span></a>
+            <td class="long-text links-color"
+              style="text-align:center; font-size: 13px;color: #919191; font-weight: normal; text-align:center; font-family: Arial, Helvetica, sans-serif;
+              -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face">
+              <p>
+                <span>To make sure you receive emails every time:<span>
+                <a style="text-decoration: underline; color: #ffffff; text-align: center; font-size: 13px; 
+                  font-weight: normal; font-family: Arial, Helvetica, sans-serif;
+                  -ko-text-decoration: @linkStyle.decoration; -ko-color: @linkStyle.color; -ko-font-size: @[linkStyle.size]px; -ko-font-family: @linkStyle.face"
+                  href="https://app.sportsboard.io/wl-instructions">
+                  <span>Get Whitelisted Now!</span>
+                </a>
+              </p>
             </td>
           </tr>
-          <tr data-ko-display="_root_.sponsor.visible" style="display: none;text-align:center">
-            <td align="center">
-                <a href="" style="-ko-attr-href: @_root_.sponsor.url;"><img border="0" hspace="0" vspace="0" src="img/sponsor.gif" alt="sponsor"
-                  style="Margin:auto;display:inline !important; -ko-attr-src: @_root_.sponsor.src; -ko-attr-alt: @_root_.sponsor.alt" /></a>
+          <tr>
+            <td class="long-text links-color"
+              style="text-align:center; font-size: 13px;color: #919191; font-weight: normal; text-align:center; font-family: Arial, Helvetica, sans-serif;
+              -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face">
+              <p>
+                Powered By:
+                <a style="text-decoration: underline; color: #ffffff; text-align: center; font-size: 13px; 
+                  font-weight: normal; font-family: Arial, Helvetica, sans-serif;
+                  -ko-text-decoration: @linkStyle.decoration; -ko-color: @linkStyle.color; -ko-font-size: @[linkStyle.size]px; -ko-font-family: @linkStyle.face"
+                    href="http://sportsboard.io/">
+                    {{sblogo}}
+                  <!-- {% if short_url %}
+                    <img src="https://app.sportsboard.io/s/{{short_url}}" alt="SportsBoard - Mobile Player Assessment Solutions" width="100px" style="max-width: 100px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none;" />
+                  {% else %}
+                    <img src="https://app.sportsboard.io/static/i/sb-logo-new-noslogan-68x30.png" alt="SportsBoard - Mobile Player Assessment Solutions" width="68px" style="max-width: 68px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none;" />
+                  {% endif %} -->
+                </a>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="long-text links-color"
+              style="text-align:center; font-size: 13px;color: #919191; font-weight: normal; text-align:center; font-family: Arial, Helvetica, sans-serif;
+              -ko-font-size: @[longTextStyle.size]px; -ko-color: @longTextStyle.color; -ko-font-family: @longTextStyle.face">
+              <p>
+                This email was delivered to you by SportsBoard. SportsBoard is a mobile assessment solution developed by West Shore Technologies Inc (475 Gate 5, Suite 115 Sausalito, CA 94965).
+                To unsubscribe from email messages managed by SportsBoard click here:
+                <!-- unsubscribe_link -->
+                <a style="text-decoration: underline; color: #ffffff; text-align: center; font-size: 13px; 
+                  font-weight: normal; font-family: Arial, Helvetica, sans-serif;
+                  -ko-text-decoration: @linkStyle.decoration; -ko-color: @linkStyle.color; -ko-font-size: @[linkStyle.size]px; -ko-font-family: @linkStyle.face"
+                  href="https://app.sportsboard.io/mailer/unsubscribe_view/{{ recipient_email }}">{{ recipient_email }}</a>
+                <!-- unsubscribe_link -->
+                . You can contact us by email:
+                <a style="text-decoration: underline; color: #ffffff; text-align: center; font-size: 13px; 
+                  font-weight: normal; font-family: Arial, Helvetica, sans-serif;
+                  -ko-text-decoration: @linkStyle.decoration; -ko-color: @linkStyle.color; -ko-font-size: @[linkStyle.size]px; -ko-font-family: @linkStyle.face"
+                  href="mailto:info@sportsboard.io">info@sportsboard.io</a>
+                or phone:
+                <a style="text-decoration: underline; color: #ffffff; text-align: center; font-size: 13px; 
+                  font-weight: normal; font-family: Arial, Helvetica, sans-serif;
+                  -ko-text-decoration: @linkStyle.decoration; -ko-color: @linkStyle.color; -ko-font-size: @[linkStyle.size]px; -ko-font-family: @linkStyle.face"
+                   href="tel:14157290121">1-415-729-0121</a>.
+                </a>
+              </p>
             </td>
           </tr>
         </table>
