@@ -48,7 +48,13 @@ tinymce.PluginManager.add('locker', function(editor, url) {
 
 tinymce.PluginManager.add('evaluation', function(editor, url) {
   var insertEvaluation = function () {
-    editor.execCommand('mceInsertContent', false, '{{evaluation}}');
+    editor.execCommand('mceInsertContent', false,
+      '{% if download_url %}' +
+        'Download your exported file here: <a href="{{download_url}}">{{download_url}}</a>' +
+      '{% elif view_url %}' +
+        'View your digital evaluation here: <a href="{{view_url}}">{{view_url}}</a>' +
+      '{% endif %}' +
+      '{{links|safe}}');
   };
 
   //editor.addCommand('mceEvaluation', insertEvaluation);

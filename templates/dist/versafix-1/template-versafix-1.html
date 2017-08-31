@@ -697,7 +697,7 @@
           <tr>
             <td align="left" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;
               -ko-font-size: @[longTextStyle.size]px; -ko-font-family: @longTextStyle.face; -ko-color: @longTextStyle.color"
-              data-ko-editable="longText" class="long-text links-color">
+              class="long-text links-color">
               <p>{{salutation}}</p>
             </td>
           </tr>
@@ -750,7 +750,7 @@
           <tr>
             <td align="left" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;
               -ko-font-size: @[longTextStyle.size]px; -ko-font-family: @longTextStyle.face; -ko-color: @longTextStyle.color"
-              data-ko-editable="longText" class="long-text links-color">
+              class="long-text links-color">
               <p>{{link}}</p>
             </td>
           </tr>
@@ -776,8 +776,13 @@
           <tr>
             <td align="left" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;
               -ko-font-size: @[longTextStyle.size]px; -ko-font-family: @longTextStyle.face; -ko-color: @longTextStyle.color"
-              data-ko-editable="longText" class="long-text links-color">
-              <p>{{evaluation}}</p>
+              class="long-text links-color">
+              {% if download_url %}
+                <p>Download your exported file here: <a href="{{download_url}}">{{download_url}}</a></p>
+              {% elif view_url %}
+                <p>View your digital evaluation here: <a href="{{view_url}}">{{view_url}}</a></p>
+              {% endif %}
+              {{links|safe}}
             </td>
           </tr>
         </table>
@@ -802,7 +807,7 @@
           <tr>
             <td align="left" style="text-align: left; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: #3f3f3f;
               -ko-font-size: @[longTextStyle.size]px; -ko-font-family: @longTextStyle.face; -ko-color: @longTextStyle.color"
-              data-ko-editable="longText" class="long-text links-color">
+              class="long-text links-color">
               <p>{{signature}}</p>
             </td>
           </tr>
